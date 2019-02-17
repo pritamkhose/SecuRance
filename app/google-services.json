@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "275914445661",
+    "firebase_url": "https://securance-94e24.firebaseio.com",
+    "project_id": "securance-94e24",
+    "storage_bucket": "securance-94e24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275914445661:android:feb1bda4c713b51c",
+        "android_client_info": {
+          "package_name": "com.securance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275914445661-iqpnvm41dfvouvgqva8i7hjs6n5rpok2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALoKuAGNJ-1q6gab2cjaLBb9vClutcA8w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

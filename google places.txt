@@ -1,0 +1,1847 @@
+
+https://bitbucket.org/pritamkhose/securance/branch/master.git
+
+ ignoring broken ref refs/heads/master.
+				src refspec refs/heads/master does not match any.
+
+				https://pritamkhose@bitbucket.org/pritamkhose/securance.git
+
+				pritamkhose@gmail.com
+				Pritam@123
+
+		 implementation 'com.google.firebase:firebase-messaging:17.3.4'
+		 https://console.firebase.google.com/u/1/project/securance-94e24/notification/compose
+		 https://github.com/firebase/quickstart-android/tree/master/messaging/app/src/main/java/com/google/firebase/quickstart/fcm/java
+
+
+dWI-H6LrsX0:APA91bFGgnsV5LEhHBeb-ynjMixcghxhPmfZZFtu6Z-g7bNE3TY2kkw-b6lnckXRztrY-pwyInIdhH0LfGMWkWZk_zMYnckq-vzHmxjl8PDIpeCJtYxnsq0YF6gH31NeoS9Oiv4AiVsi
+
+
+2019-02-17 21:17:55.308 6970-7038/com.securance D/refreshedToken -->: dWI-H6LrsX0:APA91bFGgnsV5LEhHBeb-ynjMixcghxhPmfZZFtu6Z-g7bNE3TY2kkw-b6lnckXRztrY-pwyInIdhH0LfGMWkWZk_zMYnckq-vzHmxjl8PDIpeCJtYxnsq0YF6gH31NeoS9Oiv4AiVsi
+
+
+{
+		   "notification": {
+		      "title": "JSA Notification",
+		      "body": "Happy Message!"
+		   },
+		   "data": {
+		      "Key-1": "JSA Data 1",
+		      "Key-2": "JSA Data 2"
+		   },
+		   "to": "dWI-H6LrsX0:APA91bFGgnsV5LEhHBeb-ynjMixcghxhPmfZZFtu6Z-g7bNE3TY2kkw-b6lnckXRztrY-pwyInIdhH0LfGMWkWZk_zMYnckq-vzHmxjl8PDIpeCJtYxnsq0YF6gH31NeoS9Oiv4AiVsi",
+		   "priority": "high",
+		   "token": "AIzaSyDvNVPGG8yIBqRhzeyQwbo-Ns5aMiTD9n8"
+}
+
+
+
+--------------------------------------------------------
+
+
+
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=18.5699098,73.7733724&radius=1500&type=restaurant&keyword=cruise&key=AIzaSyDt8hIz196y_wA28QQcqRp7L2LLheO6tY0
+
+
+https://console.developers.google.com/google/maps-apis/apis/places-backend.googleapis.com/credentials?project=angularweb-d8624&duration=PT1H
+
+https://developers.google.com/places/web-service/details#PlaceDetailsRequests
+
+https://developers.google.com/maps/billing/understanding-cost-of-use#places-details
+
+https://developers.google.com/places/web-service/supported_types
+
+hospital,doctor,fire_station,local_government_office,police
+
+hospital,police
+
+
+
+Name	Creation date	Restrictions	Key	
+ Server key (auto created by Google Service)	Jul 12, 2018	None	AIzaSyDt8hIz196y_wA28QQcqRp7L2LLheO6tY0 	 
+ Browser key (auto created by Google Service)	Jul 12, 2018	None	AIzaSyC0-UksDlNvO40sMM_dMew4eS6-LEh3amM 	 
+ 
+ https://cloud.google.com/maps-platform/user-guide/account-changes/
+
+ 
+ https://developers.google.com/places/web-service/search
+ https://developers.google.com/places/web-service/supported_types
+ 
+ 
+ https://www.google.com/maps/place/Cummins+India+Office+Campus+by+Panchshil+Realty/@18.5699098,73.7733724,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipPKgndF0fJUpRIm2bg1CcpPaJqztkiQCh7Z_i8P!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPKgndF0fJUpRIm2bg1CcpPaJqztkiQCh7Z_i8P%3Dw114-h86-k-no!7i4160!8i3120!4m5!3m4!1s0x0:0xc93098ba4357eef1!8m2!3d18.5733619!4d73.7731934
+
+ https://developers.google.com/places/web-service/usage-and-billing?hl=en_US#find-place
+ 
+ Limit Exceed
+
+{
+"error_message": "You have exceeded your daily request quota for this API. If you did not set a custom daily request quota, verify your project has an active billing account: http://g.co/dev/maps-no-account",
+"html_attributions": [],
+"results": [],
+"status": "OVER_QUERY_LIMIT"
+}
+ 
+ 
+Police
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=18.5699098,73.7733724&radius=15000&type=police&key=AIzaSyDt8hIz196y_wA28QQcqRp7L2LLheO6tY0
+
+
+Hospital
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=18.5699098,73.7733724&radius=5000&type=hospital&key=AIzaSyDt8hIz196y_wA28QQcqRp7L2LLheO6tY0
+
+
+Hospital
+
+{
+"html_attributions": [],
+"next_page_token": "CqQCHwEAAF80wstZ4ZpvXQnRBfsIRTeWH37eCNSGR6VIzjGOoyA0oAOCsrFrnFh9ql6qjZu7uHBCAP_nZutui36Vgbu0fUeb8IUA9JGLuJkyxfGuYBfCfGtoeHoEVlpgAX3uEDFEoGK12A68WLd_B1Y6IKctEMZOazEgpSsIIY8wprECzX_71Ah1xjCznPo_-rMzgRIoktBjQDvml9TbyT5Tl814tAQMP1q4zK_heS0K9dp8noB4TZIDs_w9IP_0L-2s2efHuIQ6cTs4ARsczkw1E3l0RHL9LRrPoR5eOqxP8YW7pGSejYPBmJPI2rYh4oDQZy4gUZSskfuiKmUi1FdXuD7ezHwMDcSTZ6wcoe2AB8CYIhyza0GrOdxm5EhncxMwjzaKGxIQSG5hsXPijESDyK3Hwge1-hoUW5ktaJGa50JvE9hNiBloXL3x16I",
+"results": [
+{
+"geometry": {
+"location": {
+"lat": 18.553752,
+"lng": 73.80687100000002
+},
+"viewport": {
+"northeast": {
+"lat": 18.5549829802915,
+"lng": 73.80820503029152
+},
+"southwest": {
+"lat": 18.5522850197085,
+"lng": 73.80550706970851
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "cbd9b5761632440d062c9370689cd51bf078d89e",
+"name": "Aditya Birla Clinic",
+"opening_hours": {
+"open_now": true
+},
+"photos": [
+{
+"height": 1375,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/108808011511407532261/photos\">Aditya Birla Clinic</a>"
+],
+"photo_reference": "CmRaAAAASj6JnFg61c2SQ6Dazz0tInRqCDqSR8StVmKe08YXCZPGJQ7RRf9fQ1JJ68qKqdKIA2ZynRLDjdmG5lhTsLGvPXQ4gEMmgX0E454_0fLEMS-50uIcArbo0CeOQ1N-fsvREhCeqwHbPo0LqdqV9KoVdJBuGhSqytRYPH0IS9JpVGomPP807SuuUQ",
+"width": 2048
+}
+],
+"place_id": "ChIJv6DlrDy_wjsRX4puuYs9rdk",
+"plus_code": {
+"compound_code": "HR34+GP Pune, Maharashtra, India",
+"global_code": "7JCMHR34+GP"
+},
+"rating": 3.8,
+"reference": "ChIJv6DlrDy_wjsRX4puuYs9rdk",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 10,
+"vicinity": "Sr. No. 127/1 A(8), Mazzanine Floor, Croma Building, NSG Infotech Park, Laxmi Road, Aund, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5553777,
+"lng": 73.80950469999999
+},
+"viewport": {
+"northeast": {
+"lat": 18.5566291302915,
+"lng": 73.8108535302915
+},
+"southwest": {
+"lat": 18.55393116970849,
+"lng": 73.80815556970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "4108527a7fea378cb49ddc7b3c1be96c9ddd0e3d",
+"name": "Dr Batra’s Homeopathy Clinic, Aundh, Pune",
+"opening_hours": {
+"open_now": true
+},
+"photos": [
+{
+"height": 1080,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/104361488393517564381/photos\">Rishabh Tatiraju</a>"
+],
+"photo_reference": "CmRaAAAAFExmF0lE8mxJf2rUyKRzHUSQMYJNcg4v7L8xOHtTEiGydhyGTUqrpAGOvcTl155PImzyZj6WfyYVzFLEFY_6Nih7MgEbhqnnk9IIeg0SW-PrkkI571p5--COM3kglVqSEhBSCrAD10QlSOYxjvDURPsHGhQn-0EteMCOOAA4An50fNFmfQshDw",
+"width": 1920
+}
+],
+"place_id": "ChIJAQAAADm_wjsRnJIItHRD-UY",
+"plus_code": {
+"compound_code": "HR45+5R Pune, Maharashtra, India",
+"global_code": "7JCMHR45+5R"
+},
+"rating": 3.8,
+"reference": "ChIJAQAAADm_wjsRnJIItHRD-UY",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"health",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 95,
+"vicinity": "Plot No.2, 2nd flr, Akshay Complex, Pushpak Park,Opp. Suzlon India, Taluka Haveli Aundh Pune, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5539967,
+"lng": 73.8050672
+},
+"viewport": {
+"northeast": {
+"lat": 18.5553471302915,
+"lng": 73.80633308029151
+},
+"southwest": {
+"lat": 18.5526491697085,
+"lng": 73.80363511970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "1c0213ee49c83169be414cd518ca74d201f638c7",
+"name": "RichFeel Trichology Center",
+"opening_hours": {
+"open_now": true
+},
+"photos": [
+{
+"height": 3024,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/101869039674251356003/photos\">Vishal Gaikar</a>"
+],
+"photo_reference": "CmRaAAAARrN858Da4xTC2Hr2mP2LgrJ5cxYbZX6kyZlVUmc6FMBYbrya_Opg1mVJCM4Rc1qqKcnxTdJInDU-qNCpOXp3Y6EXIpXZ57DelPXiL6RlxQ5BpZx9PRrmgXPm5RugtRdhEhAw1okQDzwiZiTEU9zs_UeqGhRf6LIpIgv9-xBRNn8O9HNhYq2gSg",
+"width": 4032
+}
+],
+"place_id": "ChIJsw0RXiO_wjsRA2WZ012y4t8",
+"plus_code": {
+"compound_code": "HR34+H2 Pune, Maharashtra, India",
+"global_code": "7JCMHR34+H2"
+},
+"rating": 4.3,
+"reference": "ChIJsw0RXiO_wjsRA2WZ012y4t8",
+"scope": "GOOGLE",
+"types": [
+"beauty_salon",
+"hair_care",
+"hospital",
+"health",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 67,
+"vicinity": "Gaikwadvilla apt., 1st floor, office no.2, opp. punjab national bank, Aundh, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5619325,
+"lng": 73.8047899
+},
+"viewport": {
+"northeast": {
+"lat": 18.5632776802915,
+"lng": 73.80605253029151
+},
+"southwest": {
+"lat": 18.5605797197085,
+"lng": 73.80335456970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "bc0b4460ab6531e7f9262f7e57aa9a01627e9ccc",
+"name": "Kotbagi Hospital",
+"opening_hours": {
+"open_now": true
+},
+"place_id": "ChIJ4548Iba_wjsRdz_kpX9D5QM",
+"plus_code": {
+"compound_code": "HR63+QW Pune, Maharashtra, India",
+"global_code": "7JCMHR63+QW"
+},
+"rating": 2.8,
+"reference": "ChIJ4548Iba_wjsRdz_kpX9D5QM",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 31,
+"vicinity": "Near DAV Public School, 163, DP Road, Aundh, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5576053,
+"lng": 73.8050624
+},
+"viewport": {
+"northeast": {
+"lat": 18.5589544802915,
+"lng": 73.8063537302915
+},
+"southwest": {
+"lat": 18.55625651970849,
+"lng": 73.8036557697085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+"id": "a96b370a19055d270395454bbd103d075e5e81c7",
+"name": "Envision Eye Clinic LASIK, Cataract surgery, Eye Specialist",
+"opening_hours": {
+"open_now": false
+},
+"photos": [
+{
+"height": 2048,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/101586605637358132485/photos\">Envision Eye Clinic LASIK, Cataract surgery, Eye Specialist</a>"
+],
+"photo_reference": "CmRaAAAA6TUOmS0qsKo3Ah3x_6CI6db0One2UxmciSon6oLTsIol-e9DotMV7t3TXNcvrmRBs7Oq5UNTKN73Boegu1EJQAzcsY6mu2zdNR2PfZchTX-3Hn_RgeSS_m-QlgGIMGG6EhAQH4D3fvezLpNTB3fmQKFOGhSqOzjgvrYTGo3SkzqV36Md4eGUCA",
+"width": 1536
+}
+],
+"place_id": "ChIJg2fEIiW_wjsRF1vYli7a0w4",
+"plus_code": {
+"compound_code": "HR54+22 Pune, Maharashtra, India",
+"global_code": "7JCMHR54+22"
+},
+"rating": 4.5,
+"reference": "ChIJg2fEIiW_wjsRF1vYli7a0w4",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"doctor",
+"health",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 15,
+"vicinity": "N16, Yashashree Apartments, Lane of Chitale Bandhu, Marutirao Gaikwad Nagar, Aundh, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5610441,
+"lng": 73.8025952
+},
+"viewport": {
+"northeast": {
+"lat": 18.5623133302915,
+"lng": 73.8039615802915
+},
+"southwest": {
+"lat": 18.5596153697085,
+"lng": 73.8012636197085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+"id": "79eb4e72100dca80239eea6ae8c76135aecd1f4d",
+"name": "healthcare 'nt' sickcare",
+"opening_hours": {
+"open_now": true
+},
+"photos": [
+{
+"height": 780,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/102691093504057332211/photos\">healthcare &#39;nt&#39; sickcare</a>"
+],
+"photo_reference": "CmRaAAAAskPsDOdfxj5XqbrD9YDBIMJZB0pLEZ3f_mk3lKumZnZc8Ogg9RwpYDLHoY9L2sibbk9iN0K9xfDopWFlCTDopXuyRt9A87429R4xTqZFq9G1fPie8zXbQBbmdxJrjubCEhCdiQ0clp6AyZqBlTZVQve0GhR44qoBYXjPG02AtBH6Wrc3Jtrdkg",
+"width": 1040
+}
+],
+"place_id": "ChIJiWnyfC-_wjsRLcNDOPn_mAQ",
+"plus_code": {
+"compound_code": "HR63+C2 Pune, Maharashtra, India",
+"global_code": "7JCMHR63+C2"
+},
+"rating": 4.8,
+"reference": "ChIJiWnyfC-_wjsRLcNDOPn_mAQ",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"doctor",
+"health",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 128,
+"vicinity": "Office No 2A, First Floor, Omkar Complex New DP Road, Medipoint Hospital Lane, Aundh, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.548272,
+"lng": 73.7931768
+},
+"viewport": {
+"northeast": {
+"lat": 18.5495393802915,
+"lng": 73.7945132302915
+},
+"southwest": {
+"lat": 18.5468414197085,
+"lng": 73.79181526970848
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "a2f129ce71c037efc6ac31134f7f4efe99f7cfe1",
+"name": "Physiotherapist",
+"opening_hours": {
+"open_now": false
+},
+"photos": [
+{
+"height": 3120,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/117329154832157612055/photos\">Prakash Dale</a>"
+],
+"photo_reference": "CmRaAAAAX5s578_GQqU-M-fxGbXdWc__ZSjovkHSAF26RUNhaD8mpP2IcjCBdxwYSZW6odWAuqcJ6pwdWccsWWuqCiYAnMYHf7k5wrMMpiFfpXT6rgPum8lOGG4Ek1QfWNq9TQUsEhC7TPNpT5dhcx_QlxYagSGUGhT1xodDT2LpPLRtnJetKStsQn7l0Q",
+"width": 4160
+}
+],
+"place_id": "ChIJKc_N4M2-wjsRhVue6ClCc_M",
+"plus_code": {
+"compound_code": "GQXV+87 Pune, Maharashtra, India",
+"global_code": "7JCMGQXV+87"
+},
+"rating": 4.5,
+"reference": "ChIJKc_N4M2-wjsRhVue6ClCc_M",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 2,
+"vicinity": "ojas road, Ayushman laboratory and polyclinic A103 kumar sahwas soceity ,kumar, Baner - Pashan Link Road, Pashan, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5634194,
+"lng": 73.8096723
+},
+"viewport": {
+"northeast": {
+"lat": 18.56474858029151,
+"lng": 73.8111640802915
+},
+"southwest": {
+"lat": 18.5620506197085,
+"lng": 73.8084661197085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "f5633875a5c3cccfde03b17887fc123c18f56d10",
+"name": "Vivur Aventures (Thyrocare Services)",
+"opening_hours": {
+"open_now": true
+},
+"place_id": "ChIJfe_0MjC_wjsRC6CNneQV-_M",
+"plus_code": {
+"compound_code": "HR75+9V Pune, Maharashtra, India",
+"global_code": "7JCMHR75+9V"
+},
+"rating": 3,
+"reference": "ChIJfe_0MjC_wjsRC6CNneQV-_M",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 1,
+"vicinity": "Shop No 4, Harshada Classic Apartment, S No 13/1+2, Spicer-sangvi Road, Aundh, Near Ibp Petrol Pump, Aundh, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.599525,
+"lng": 73.76361299999999
+},
+"viewport": {
+"northeast": {
+"lat": 18.6009296802915,
+"lng": 73.7650395302915
+},
+"southwest": {
+"lat": 18.5982317197085,
+"lng": 73.76234156970848
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "50fd7a2d5f82aadf6f0b314084ce439aa3ea6652",
+"name": "Polaris Healthcare",
+"opening_hours": {
+"open_now": true
+},
+"photos": [
+{
+"height": 470,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/102434741520735760290/photos\">Nihal Panchtilak1</a>"
+],
+"photo_reference": "CmRaAAAACxfGF90NZCcBr86HzFbV8CMkqlz2TUbPwLylRjccDyrbqg_U5tEqhL6GbnsMW4p44IPR70Dp8-_oyMLmOcwIzm0i7xMjw2_eDf4qOWIlpY5BD6VGvKGDagH621F-0vhYEhCf9tjJtquvcf1P7GtA4P3NGhSmZRWEvzKUjxGb5L2N0DbubMCbOw",
+"width": 705
+}
+],
+"place_id": "ChIJ64JdX265wjsRE6Lf751AKfw",
+"plus_code": {
+"compound_code": "HQX7+RC Pimpri-Chinchwad, Maharashtra, India",
+"global_code": "7JCMHQX7+RC"
+},
+"rating": 3,
+"reference": "ChIJ64JdX265wjsRE6Lf751AKfw",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 159,
+"vicinity": "In front of Nandan Inspera, Near Datta Mandir, Wakad-Dange Chowk Road, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5887501,
+"lng": 73.8014084
+},
+"viewport": {
+"northeast": {
+"lat": 18.5900933302915,
+"lng": 73.8029167802915
+},
+"southwest": {
+"lat": 18.5873953697085,
+"lng": 73.80021881970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "1e18ea45778f603e30dfbb639cf34363d8dda7b5",
+"name": "Shri Shakti Hospital",
+"place_id": "ChIJJdK9Bdy4wjsRWclm60-z4_I",
+"plus_code": {
+"compound_code": "HRQ2+GH Pimpri-Chinchwad, Maharashtra, India",
+"global_code": "7JCMHRQ2+GH"
+},
+"rating": 2.3,
+"reference": "ChIJJdK9Bdy4wjsRWclm60-z4_I",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 7,
+"vicinity": "Near Rakshak Chowk, Kate Vasti 59/3, Kunj Colony, Pimple Saudagar, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5597716,
+"lng": 73.8030735
+},
+"viewport": {
+"northeast": {
+"lat": 18.5611333802915,
+"lng": 73.8045118802915
+},
+"southwest": {
+"lat": 18.5584354197085,
+"lng": 73.8018139197085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "d6277721e8b5d7cabb75d7d7913f161ea75955ae",
+"name": "Shashwat Hospital, Aundh",
+"opening_hours": {
+"open_now": true
+},
+"photos": [
+{
+"height": 1080,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/100887946335676286485/photos\">AVER Music</a>"
+],
+"photo_reference": "CmRaAAAA5_yZRUMelvOwx7VfmOTpfbCJ9P9YEiC8XI8bXfDp_Ju7FTJ5UrFgSaGBEhoeYIq98ArPO-f__cqYHZy3SLH6u46GuKfUtW2OykYfHQnRatbp-wDOsNqfxsbnP_P0hKVpEhBtyBKfmmpx6m4mcP9KdQOaGhQrcpEUiPkzxJiSm31I-oQnNNv4XA",
+"width": 1920
+}
+],
+"place_id": "ChIJp5bAYi-_wjsRetgDZsF7TgY",
+"plus_code": {
+"compound_code": "HR53+W6 Pune, Maharashtra, India",
+"global_code": "7JCMHR53+W6"
+},
+"rating": 3,
+"reference": "ChIJp5bAYi-_wjsRetgDZsF7TgY",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 69,
+"vicinity": "Next To DAV School, Opposite Aundh Telephone Exchange, Near Gaikwad Petrol Pump, Baner DP Road, Aundh, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5635412,
+"lng": 73.78232779999999
+},
+"viewport": {
+"northeast": {
+"lat": 18.5649796302915,
+"lng": 73.78371228029151
+},
+"southwest": {
+"lat": 18.56228166970849,
+"lng": 73.78101431970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "83456662d1db472f227fd0e79f25b39fa1cf8e00",
+"name": "Oro Dental Care Clinic, Pune",
+"opening_hours": {
+"open_now": true
+},
+"place_id": "ChIJi7yC4s2-wjsRPLTihXzejbs",
+"plus_code": {
+"compound_code": "HQ7J+CW Pune, Maharashtra, India",
+"global_code": "7JCMHQ7J+CW"
+},
+"rating": 4.7,
+"reference": "ChIJi7yC4s2-wjsRPLTihXzejbs",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"dentist",
+"health",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 3,
+"vicinity": "1st Floor, Shriram Yashada building, Near, Baner Road, Balewadi Phata, Baner, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5594131,
+"lng": 73.80254479999999
+},
+"viewport": {
+"northeast": {
+"lat": 18.5608018302915,
+"lng": 73.8038863302915
+},
+"southwest": {
+"lat": 18.5581038697085,
+"lng": 73.8011883697085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "b4bc556b2310db30da9fb111432738fbae08ad1f",
+"name": "Sanjeevan Maternity & Surgical Hospital",
+"opening_hours": {
+"open_now": false
+},
+"photos": [
+{
+"height": 431,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/118214768564467620177/photos\">Sanjeevan Maternity &amp; Surgical Hospital</a>"
+],
+"photo_reference": "CmRaAAAATstsuj1k0UWOFuP2Z9idKM-xO7EZ5THlkUTeO1wdaSnJyHtigRDUlhe9124zP_lngSb1_Tnx2JuSYaE5pHheoiv3ZYmpvXS4psZRBwkAtzG45V6ZhW2aBdyOJvAoP-GxEhACwRA5D_KqngAeLKDCkBJLGhSfUyh0llKARIXzpIS7n1a3siVRkA",
+"width": 660
+}
+],
+"place_id": "ChIJa7j7gSW_wjsRSPjBs80FUuQ",
+"plus_code": {
+"compound_code": "HR53+Q2 Pune, Maharashtra, India",
+"global_code": "7JCMHR53+Q2"
+},
+"rating": 4.8,
+"reference": "ChIJa7j7gSW_wjsRSPjBs80FUuQ",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 10,
+"vicinity": "Sr 251/3/11& 252/1/2 D P Road, Opposite Aundh Telephone Exchange Baner, Aundh, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.56388889999999,
+"lng": 73.7830043
+},
+"viewport": {
+"northeast": {
+"lat": 18.5651893302915,
+"lng": 73.7842529302915
+},
+"southwest": {
+"lat": 18.5624913697085,
+"lng": 73.7815549697085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "db1679cbd02f5890abf22a2ffc26566a8db73b40",
+"name": "Life Line Hospital",
+"opening_hours": {
+"open_now": false
+},
+"photos": [
+{
+"height": 3120,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/102407535214362145180/photos\">Riyaj Mulla</a>"
+],
+"photo_reference": "CmRaAAAAc35tUXxDd_Ickx6SzqcrH0Q-UkKmGdV4zRQb6Rhj_CMpJmyTR1oh_RRyIV2vftRUuRy-F-j0DHDJK9QTnGl1ti5A9tLtmOzkvFtrfSqzVq_8BBxYlSJ0QEzTKuIs_Iw2EhAFzmxk6bzAHuwhLByMlQ7IGhQRM8Puy-Kv5Stadatvg34zpilh1g",
+"width": 4160
+}
+],
+"place_id": "ChIJSbmM_82-wjsRf6kehi3SRP4",
+"plus_code": {
+"compound_code": "HQ7M+H6 Pune, Maharashtra, India",
+"global_code": "7JCMHQ7M+H6"
+},
+"rating": 3.1,
+"reference": "ChIJSbmM_82-wjsRf6kehi3SRP4",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 11,
+"vicinity": "Baner Balewadi Road, Balewadi Phata, Baner, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.559299,
+"lng": 73.78960099999999
+},
+"viewport": {
+"northeast": {
+"lat": 18.5607448302915,
+"lng": 73.7910013302915
+},
+"southwest": {
+"lat": 18.55804686970849,
+"lng": 73.78830336970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "103a6603a06942efb6f54077bdb23129fdd8c6bd",
+"name": "Dhanwantari Hospital",
+"photos": [
+{
+"height": 1920,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/113414758354093994036/photos\">Punit Pal Singh Sardar</a>"
+],
+"photo_reference": "CmRaAAAAfL0d3K2dlgK4fDxg6D4UPD4o_tx0emYdR1ThYXUC73Bqms8d95yQGbMYA4WBhmQ5iFW300vlW9WAV7qTWLDpS1EAPOEY9XcrhvR76JeaWhFmtJh2t3AjGSkVlw8tycrxEhBiqIL1hEXT6X4L2q1PTX92GhQMtIS_Iks5pdD6b1Loj0PSWbt_EA",
+"width": 1080
+}
+],
+"place_id": "ChIJI9bCT9e-wjsRLyo-7jg2EeU",
+"plus_code": {
+"compound_code": "HQ5Q+PR Pune, Maharashtra, India",
+"global_code": "7JCMHQ5Q+PR"
+},
+"rating": 3.7,
+"reference": "ChIJI9bCT9e-wjsRLyo-7jg2EeU",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 6,
+"vicinity": "Dhanwantari Building, Baner Road, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.551841,
+"lng": 73.7919922
+},
+"viewport": {
+"northeast": {
+"lat": 18.5532919802915,
+"lng": 73.7933434802915
+},
+"southwest": {
+"lat": 18.5505940197085,
+"lng": 73.79064551970848
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+"id": "077639a0422dc0ef821cafcf20bdbaa71d3cb141",
+"name": "Enhance Dental Care Clinic",
+"opening_hours": {
+"open_now": true
+},
+"place_id": "ChIJr_NbPt--wjsRy_iIhY4izRI",
+"plus_code": {
+"compound_code": "HQ2R+PQ Pune, Maharashtra, India",
+"global_code": "7JCMHQ2R+PQ"
+},
+"reference": "ChIJr_NbPt--wjsRy_iIhY4izRI",
+"scope": "GOOGLE",
+"types": [
+"dentist",
+"hospital",
+"health",
+"point_of_interest",
+"establishment"
+],
+"vicinity": "3rd floor, Above ‘OFF beat resto cafe’, Baner - Pashan Link Road, Pashan, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5667952,
+"lng": 73.7713306
+},
+"viewport": {
+"northeast": {
+"lat": 18.5680784302915,
+"lng": 73.77266403029151
+},
+"southwest": {
+"lat": 18.5653804697085,
+"lng": 73.76996606970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "d84e85e16c7a7b457a4ddfb4e46f093eef862f96",
+"name": "Kilbil Children's and Woman Clinic",
+"opening_hours": {
+"open_now": false
+},
+"place_id": "ChIJQ2PNt8u-wjsRCwVqUF7shOM",
+"plus_code": {
+"compound_code": "HQ8C+PG Pune, Maharashtra, India",
+"global_code": "7JCMHQ8C+PG"
+},
+"rating": 4.7,
+"reference": "ChIJQ2PNt8u-wjsRCwVqUF7shOM",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 18,
+"vicinity": "Nirvan, Office No-A 304, BanerBiz Bay, Near Hotel, Veerbhadra Nagar Road, Baner, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5664871,
+"lng": 73.77084409999999
+},
+"viewport": {
+"northeast": {
+"lat": 18.5677406802915,
+"lng": 73.7721546302915
+},
+"southwest": {
+"lat": 18.5650427197085,
+"lng": 73.76945666970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "c03405afd2db4fdc02476a9ca50ee25c4bb9146e",
+"name": "Health & Remedy Center",
+"opening_hours": {
+"open_now": true
+},
+"place_id": "ChIJk8BDZLW-wjsR5eNLNglasLI",
+"plus_code": {
+"compound_code": "HQ8C+H8 Pune, Maharashtra, India",
+"global_code": "7JCMHQ8C+H8"
+},
+"reference": "ChIJk8BDZLW-wjsR5eNLNglasLI",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"point_of_interest",
+"establishment"
+],
+"vicinity": "Baner Road, Laxman Nagar, Baner, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5741838,
+"lng": 73.77356019999999
+},
+"viewport": {
+"northeast": {
+"lat": 18.5752900302915,
+"lng": 73.7749139302915
+},
+"southwest": {
+"lat": 18.5725920697085,
+"lng": 73.77221596970848
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "91e668f57239b6b2359eb14aa9adbec140915e50",
+"name": "Golwilkar Metropolis ppathology Collection Centre",
+"opening_hours": {
+"open_now": true
+},
+"place_id": "ChIJlx971zW5wjsRQ98bYkk57YQ",
+"plus_code": {
+"compound_code": "HQFF+MC Pune, Maharashtra, India",
+"global_code": "7JCMHQFF+MC"
+},
+"reference": "ChIJlx971zW5wjsRQ98bYkk57YQ",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"point_of_interest",
+"establishment"
+],
+"vicinity": "103 Transbay, Balewadi Road, Balewadi, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5673182,
+"lng": 73.76896889999999
+},
+"viewport": {
+"northeast": {
+"lat": 18.5688327802915,
+"lng": 73.77033443029151
+},
+"southwest": {
+"lat": 18.5661348197085,
+"lng": 73.76763646970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/doctor-71.png",
+"id": "5a1e00d72f57607c26bc1381eb7db32e9c2696fa",
+"name": "Accord Multi-Speciality Hospital",
+"place_id": "ChIJ6V_3JLW-wjsRjS5UpMEoaco",
+"plus_code": {
+"compound_code": "HQ89+WH Pune, Maharashtra, India",
+"global_code": "7JCMHQ89+WH"
+},
+"rating": 2.5,
+"reference": "ChIJ6V_3JLW-wjsRjS5UpMEoaco",
+"scope": "GOOGLE",
+"types": [
+"hospital",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 2,
+"vicinity": "6th Floor, Accord IT Park, Baner Road, Baner, Pune"
+}
+],
+"status": "OK"
+}
+
+------------------------------------------------------------------------------------------------------------------------
+Police
+{
+"html_attributions": [],
+"next_page_token": "CqQCHQEAAG4hKtxFCnw2lLtsPh6q6XxkKzj0403mQNhMrRaQTfrMWNrIN1-Nzi-8Prb6fE1xCYHMEHcGbvO2DTQJDe-aNz6PM0twd5yDVBUJ-_UlOwYbkQlXxTvRE8yQy73DNyBXHqlmrdfA3SR3mcnKB1d7Ow4W0i2s4EDkV9oHflKkz0A95zY8-_hygLQ-nr1-lUl5OCYUZGYc_H9suVAhI1Q2nOXSKimZoz6l7PmhRCGwD0fOuxUTAqfWaMUUr7g63gh1I2-HaJrA3a4MDIxfnrU15aoauCsHnkUDkHlNHL_wwHe-deUhC5wZ95IrlwuSLI1Y9V7-ZGop0RFzRV9Gm2STnkeVTeBeI8E_9jHc2SZjW3zXF79GliOG23hHZq9bQOWY5xIQNhQUGjoUAciuOKtgDQUZkRoUrJSjOEjD2vBnQqT-fxUIBoO1o_w",
+"results": [
+{
+"geometry": {
+"location": {
+"lat": 18.5916288,
+"lng": 73.73883959999999
+},
+"viewport": {
+"northeast": {
+"lat": 18.5929642302915,
+"lng": 73.7402744302915
+},
+"southwest": {
+"lat": 18.5902662697085,
+"lng": 73.73757646970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "aee127deac2690f476ba0fae511051ba31a9abad",
+"name": "Hinjewadi Traffic Police Office",
+"place_id": "ChIJf3W7_9y7wjsR_W7eSIUB51o",
+"plus_code": {
+"compound_code": "HPRQ+MG Pimpri-Chinchwad, Maharashtra, India",
+"global_code": "7JCMHPRQ+MG"
+},
+"rating": 1.8,
+"reference": "ChIJf3W7_9y7wjsR_W7eSIUB51o",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 5,
+"vicinity": "Dange Chowk Road, Hinjawadi Village, Hinjawadi, Pimpri-Chinchwad"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5861235,
+"lng": 73.7357457
+},
+"viewport": {
+"northeast": {
+"lat": 18.5875415802915,
+"lng": 73.7370648802915
+},
+"southwest": {
+"lat": 18.5848436197085,
+"lng": 73.73436691970848
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "1f9b6240218d6dcf3fa68ba6ae6b5bb5bd93fac3",
+"name": "Police Station Hinjawadi",
+"photos": [
+{
+"height": 2592,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/108123384786867882997/photos\">Joe Sabu</a>"
+],
+"photo_reference": "CmRaAAAAPWQ2gdv6guvgP6lki_f_-Hw5dR_ctpZ-TXfWdyjpkscnWxkVbvvH0UWv4CTUkzMoXwnemeGoitSIXSz-B3X43jpSPfWXfmyTDgTiRwTT16YltQnhwZ4OfEHtgfFd4e6xEhBViSkrMGEFloVWhhQuNzpIGhSK2T8RHKF6_WOsXgPhl2Uh1XfidA",
+"width": 4608
+}
+],
+"place_id": "ChIJn_HBeei7wjsRxmoWnPY1R-w",
+"plus_code": {
+"compound_code": "HPPP+C7 Pimpri-Chinchwad, Maharashtra, India",
+"global_code": "7JCMHPPP+C7"
+},
+"rating": 3.8,
+"reference": "ChIJn_HBeei7wjsRxmoWnPY1R-w",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 19,
+"vicinity": "Hinjawadi Phase 1 Road, Phase 1, Hinjewadi Rajiv Gandhi Infotech Park, Hinjawadi, Pimpri-Chinchwad"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.6015789,
+"lng": 73.7993667
+},
+"viewport": {
+"northeast": {
+"lat": 18.6029279302915,
+"lng": 73.80072923029151
+},
+"southwest": {
+"lat": 18.6002299697085,
+"lng": 73.79803126970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "3aba1621f0b2497a91d44ec2ef107017ee15e86e",
+"name": "Pimple Saudagar Village Police Station",
+"place_id": "ChIJXTo_luO4wjsRaGr832QgBqk",
+"plus_code": {
+"compound_code": "JQ2X+JP Pimpri-Chinchwad, Maharashtra, India",
+"global_code": "7JCMJQ2X+JP"
+},
+"rating": 4.4,
+"reference": "ChIJXTo_luO4wjsRaGr832QgBqk",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 5,
+"vicinity": "Pimple Saudagar Road, Shri Ram Colony, Pimpri Chinchwad, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.578587,
+"lng": 73.815584
+},
+"viewport": {
+"northeast": {
+"lat": 18.57990138029151,
+"lng": 73.81710878029152
+},
+"southwest": {
+"lat": 18.5772034197085,
+"lng": 73.8144108197085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "0847605118689273cd9d46e5ebdf5fe613d597b7",
+"name": "Sangvi police station",
+"photos": [
+{
+"height": 1600,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/100829461382075228798/photos\">somnath Nevse</a>"
+],
+"photo_reference": "CmRaAAAAuhEASGfzuwYoZbIOuSYUUWYwxNhSeWchPa9oo_ZPXksx89TINubewo6bPqXbxHqjdpuXxU08X6lxN5eLBmFABqkabzh_zYiPWODiYWRYWt1AUPMDvJeTDP-OwzpHHJLKEhB6Vl_XU38GGbclcdm1YyAFGhRo6HivaJlTS5Xr0UQoWgWsjEKDKQ",
+"width": 1200
+}
+],
+"place_id": "ChIJEyFQgsm4wjsRamOOaaLOs_I",
+"plus_code": {
+"compound_code": "HRH8+C6 Pimpri-Chinchwad, Maharashtra, India",
+"global_code": "7JCMHRH8+C6"
+},
+"rating": 4,
+"reference": "ChIJEyFQgsm4wjsRamOOaaLOs_I",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 6,
+"vicinity": "3, Shirode Road, PWD Colony, New Sanghavi, Pimpri-Chinchwad"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5686286,
+"lng": 73.7750411
+},
+"viewport": {
+"northeast": {
+"lat": 18.5699912802915,
+"lng": 73.7764216802915
+},
+"southwest": {
+"lat": 18.5672933197085,
+"lng": 73.77372371970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "22e22d794e2c436c566145cd7fe1391627d3cc75",
+"name": "Baner Balewadi Police Chowky",
+"photos": [
+{
+"height": 2988,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/109519640447959679697/photos\">Gaurav P</a>"
+],
+"photo_reference": "CmRaAAAAplwu5nxvJ4QyjDxMAa3k9OQIFowuP3V-h-dLngj8C3kEWfD5nh01l2UFHQZhr1iCcGbsPMEGbCridJonKuT8bR8-Y2HyWs0nGcBvoMYTM-QI8P_dem9yi5nza3sK5aVaEhAGqpqmHuJZrdpxMf0lDD7KGhQsYIt5lyDcVdlXQ2zdSrYl_4Gc4Q",
+"width": 5312
+}
+],
+"place_id": "ChIJRW57Upm_wjsRMngCOvXeiJE",
+"plus_code": {
+"compound_code": "HQ9G+F2 Pune, Maharashtra, India",
+"global_code": "7JCMHQ9G+F2"
+},
+"rating": 4,
+"reference": "ChIJRW57Upm_wjsRMngCOvXeiJE",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 1,
+"vicinity": "Balewadi High Street, Baner, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5699994,
+"lng": 73.7630781
+},
+"viewport": {
+"northeast": {
+"lat": 18.5713857302915,
+"lng": 73.76445703029151
+},
+"southwest": {
+"lat": 18.5686877697085,
+"lng": 73.7617590697085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "fbf98d8d1113bfb7a1cc6265ecf69be68fc8d6e1",
+"name": "Hinjewadi Police Station",
+"photos": [
+{
+"height": 1080,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/105370693762311346748/photos\">Rishikesh Phulsundar</a>"
+],
+"photo_reference": "CmRaAAAAf0YM0MIhsWt1PGEHfKAdtzPzuDk9gqtYrblhsejQeXvt9bX7wN-kjEndmm_yJ5eKyDHOXTyOQhIbOsrCNhH6u1O5Tj57xVgp2plO9CEJvIv5p5ZBlm5djltl-vk0hqdeEhAKcbHjK0wGBDUrRlgt0DldGhTfwASE5-rEIAXE2LWC0whZx0l79g",
+"width": 1920
+}
+],
+"place_id": "ChIJKzjk-ky5wjsRD6FgZ0IXyd8",
+"plus_code": {
+"compound_code": "HQ97+X6 Pune, Maharashtra, India",
+"global_code": "7JCMHQ97+X6"
+},
+"rating": 3.3,
+"reference": "ChIJKzjk-ky5wjsRD6FgZ0IXyd8",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 8,
+"vicinity": "4 & 12/2/2, Mahalunge, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5921262,
+"lng": 73.75834429999999
+},
+"viewport": {
+"northeast": {
+"lat": 18.5934534302915,
+"lng": 73.7596961302915
+},
+"southwest": {
+"lat": 18.59075546970849,
+"lng": 73.75699816970848
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "b7b5859e083c98261ed357891ff99fcfd6502722",
+"name": "Wakad Police Chouki",
+"photos": [
+{
+"height": 720,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/107571223402235935220/photos\">Unknown Anonymous</a>"
+],
+"photo_reference": "CmRaAAAAQxn5MOx2LuM_aGmebokoA4U3SIXmO8U_DhlxLcO0Z6Z-VfEcNKo1K3YlZnq5TZrRUkjVtS1-S4DLtUzvmakuk26niVAT9GSay_CbLxsZvB5w4B-zsZ4BUID9DEJtoOKhEhC8sgMM_ob-sf3GF_K2CfEjGhR8evqNhahc8IW8y6zou0CoIoMHaQ",
+"width": 1280
+}
+],
+"place_id": "ChIJzzc0wWe5wjsRIIzfwgsGW5M",
+"plus_code": {
+"compound_code": "HQR5+V8 Pimpri-Chinchwad, Maharashtra, India",
+"global_code": "7JCMHQR5+V8"
+},
+"reference": "ChIJzzc0wWe5wjsRIIzfwgsGW5M",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"vicinity": "Wakad - Nashik Phata BRTS Road, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.592054,
+"lng": 73.7575956
+},
+"viewport": {
+"northeast": {
+"lat": 18.5933911802915,
+"lng": 73.75894558029151
+},
+"southwest": {
+"lat": 18.59069321970849,
+"lng": 73.7562476197085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "5b5b76de7b4efc32141da49c5e2b0fc33ff8c7e0",
+"name": "Wakad Police Chowky",
+"photos": [
+{
+"height": 1080,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/114633583389193968632/photos\">Hitesh Sahu</a>"
+],
+"photo_reference": "CmRaAAAAQrhqJmpId16J6GcRv65a-VWaoCeLia-T9Foc4dsfgt2KEMnioGWvUqHtXiqpBkLTXl8Sy0zc9Kq87V4017dWXSJIbJL_pgDg6uNHHBsxv-JTf593dy52wy1NyWEQ9LV3EhAnYWHWObQVnxYZ-cWYQKt8GhQPxzKR2LVpMW44hv5HB1kHlO5vTg",
+"width": 1920
+}
+],
+"place_id": "ChIJrelxo2e5wjsRZaCfklYbBQo",
+"plus_code": {
+"compound_code": "HQR5+R2 Pimpri-Chinchwad, Maharashtra, India",
+"global_code": "7JCMHQR5+R2"
+},
+"rating": 2.7,
+"reference": "ChIJrelxo2e5wjsRZaCfklYbBQo",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 24,
+"vicinity": "baliraj magal karyalay rahatni"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5919216,
+"lng": 73.75617439999999
+},
+"viewport": {
+"northeast": {
+"lat": 18.5933019802915,
+"lng": 73.7575235802915
+},
+"southwest": {
+"lat": 18.5906040197085,
+"lng": 73.7548256197085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "3f41e8bc77d1a1ab5b31389f5c0cfe22032eaea2",
+"name": "Hinjewadi Police Extension",
+"photos": [
+{
+"height": 3264,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/110397415654003520215/photos\">Abhay Singh Rajpurohit</a>"
+],
+"photo_reference": "CmRaAAAAQY69Ncq039T3yssjc0Ie7axqjljDtRCTSO2YEBwgpOPNYEE51j3OgfZKOsx7blyvIOjlC6GSFhB2Rj0KgiF4etdHkbkoLkL5H4HQUv8cUeSX6nAIkSk5b6M8M7bY4MIUEhC2uoDpT70sGRBxvED9XU97GhQV4JqWqb_kpRKeQbRj6VTpScTDQQ",
+"width": 2448
+}
+],
+"place_id": "ChIJBVsBDGe5wjsRSt0p7SC77LM",
+"plus_code": {
+"compound_code": "HQR4+QF Pimpri-Chinchwad, Maharashtra, India",
+"global_code": "7JCMHQR4+QF"
+},
+"rating": 1,
+"reference": "ChIJBVsBDGe5wjsRSt0p7SC77LM",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 3,
+"vicinity": "Plot 158/159, Mumbai Pune Bypass Road, Bhujbal Vasti, Wakad, Pimpri-Chinchwad"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5920025,
+"lng": 73.7559521
+},
+"viewport": {
+"northeast": {
+"lat": 18.5933410802915,
+"lng": 73.7573012802915
+},
+"southwest": {
+"lat": 18.5906431197085,
+"lng": 73.7546033197085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "4469051b60dcda95f4b37868b1033e09fdaf878a",
+"name": "Traffic Police Station",
+"photos": [
+{
+"height": 4032,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/113797268794432953468/photos\">Tanay Srivastava</a>"
+],
+"photo_reference": "CmRaAAAAaSaxkgLWkBrJAzf85ZOdZUQVgtqVMikTirlyVnUkuExI4Zfzyy712fpnwS6ujjUBMxA14dgkZ58TQyhlFsaBPKw57y7TsoZFFFkkAhpAiJFQAg0zDk1sr9l4Zj2eKYhlEhDlw4kEttUPHZo5Bx9ZNu_AGhQyL8UHeWBtRzPsK5NxVTVL7OdBbA",
+"width": 3024
+}
+],
+"place_id": "ChIJiXEUDme5wjsRl6BYdq-2ZFc",
+"plus_code": {
+"compound_code": "HQR4+R9 Pimpri-Chinchwad, Maharashtra, India",
+"global_code": "7JCMHQR4+R9"
+},
+"rating": 2.4,
+"reference": "ChIJiXEUDme5wjsRl6BYdq-2ZFc",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 5,
+"vicinity": "Bhujbal Vasti, Wakad, Pimpri-Chinchwad"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5708337,
+"lng": 73.8079216
+},
+"viewport": {
+"northeast": {
+"lat": 18.5722401302915,
+"lng": 73.80937428029151
+},
+"southwest": {
+"lat": 18.56954216970849,
+"lng": 73.80667631970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "a1641c8a36c571406a4e21a097af5fab10d2b00a",
+"name": "Sangvi Traffic Police Station",
+"photos": [
+{
+"height": 2610,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/104525454414353035091/photos\">Vibhor Dube</a>"
+],
+"photo_reference": "CmRaAAAAv-uGBVJ99gFCXRU6bnoYcdgO5WWbnHOrNZDO8SrL34hq2yQLoHFpXBnvIDT8wgAnmPC4mLOI2wG2wIsYuy-ffdSF3pJWG_qNGyNdth9xLv7wlS3l1D3yi9vWSx0xX-NtEhCkAJvnBD9OG_kvb0Rn7A9aGhR8UzbXWGnWgi_5qTM4IrXKpBheEg",
+"width": 4640
+}
+],
+"place_id": "ChIJo8ZLuDK_wjsRsqXj22vZZkA",
+"plus_code": {
+"compound_code": "HRC5+85 Pimpri-Chinchwad, Maharashtra, India",
+"global_code": "7JCMHRC5+85"
+},
+"rating": 1,
+"reference": "ChIJo8ZLuDK_wjsRsqXj22vZZkA",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 3,
+"vicinity": "Aundh - Ravet BRTS Road, Old Sangvi, Pimpri-Chinchwad"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.603902,
+"lng": 73.77037899999999
+},
+"viewport": {
+"northeast": {
+"lat": 18.6052546302915,
+"lng": 73.7716652802915
+},
+"southwest": {
+"lat": 18.60255666970849,
+"lng": 73.7689673197085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "6c7c65e6bc13187b1302717247f57d07224838b2",
+"name": "कावेरी नगर वाकड पोलिस लाईन पुणे- ४११०५७",
+"place_id": "ChIJ0QdzdbK5wjsR5mtsqVCoqkY",
+"plus_code": {
+"compound_code": "JQ3C+H5 Pimpri-Chinchwad, Maharashtra, India",
+"global_code": "7JCMJQ3C+H5"
+},
+"rating": 3.5,
+"reference": "ChIJ0QdzdbK5wjsR5mtsqVCoqkY",
+"scope": "GOOGLE",
+"types": [
+"local_government_office",
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 2,
+"vicinity": "कावेरी नगर वाकड, पोलिस लाईन"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5627579,
+"lng": 73.8127444
+},
+"viewport": {
+"northeast": {
+"lat": 18.5641050802915,
+"lng": 73.81409223029151
+},
+"southwest": {
+"lat": 18.56140711970849,
+"lng": 73.8113942697085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "0570b34a1c3fd4f7ff6f733e2889910559be7739",
+"name": "Bodygate Police line",
+"photos": [
+{
+"height": 1280,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/100476848683060785966/photos\">Prashant Wakode</a>"
+],
+"photo_reference": "CmRaAAAASSxcO8ujhHt6CFCugX2JO0NhEdVY1mVP2IJzk7vIXvViF1jOMnfyAmO2lxX2DZg_P1eU5NOoEVG63b_7rUZt2dyPUaSHCYMYcKxmwxD5jmgNV2Ebc73q_Dwc8pYxRHFjEhBiCmXw72RdWOvt95m4MeWIGhRPdMFC_23LxfN94ZbliiEmVpybsQ",
+"width": 720
+}
+],
+"place_id": "ChIJPUOOLTe_wjsRG_jSYPskdsk",
+"plus_code": {
+"compound_code": "HR77+43 Pune, Maharashtra, India",
+"global_code": "7JCMHR77+43"
+},
+"rating": 5,
+"reference": "ChIJPUOOLTe_wjsRG_jSYPskdsk",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 2,
+"vicinity": "4, Ward No. 8, Aundh Gaon, Aundh, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.6073884,
+"lng": 73.7651776
+},
+"viewport": {
+"northeast": {
+"lat": 18.6087484802915,
+"lng": 73.76644978029151
+},
+"southwest": {
+"lat": 18.6060505197085,
+"lng": 73.76375181970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "93ba5445b9ed4bd121bf31ffc2c44f1c08af3309",
+"name": "Wakad Police Station And Passport Verification",
+"photos": [
+{
+"height": 3024,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/108943565905609904701/photos\">Mangal Pardeshi</a>"
+],
+"photo_reference": "CmRaAAAAwquGiiapQ8mpMNBsiZqSqcu8hfdKDkXv4B20gOgc3gWVzDpnS5B7qZzaa9RtBBX8qCLamUGmU5L3oQapRbGSH5CDB6Ma8F5KYO8dCObEk7uC6YV3kht51ltEKRxi_MSqEhBypyQPJGUuJw6NhFsjgTP6GhS15zFcmzKtFMEMRn4xfRAwus2ejg",
+"width": 4032
+}
+],
+"place_id": "ChIJvReaWXG5wjsR_0LlPaJuLIs",
+"plus_code": {
+"compound_code": "JQ48+X3 Pimpri-Chinchwad, Maharashtra, India",
+"global_code": "7JCMJQ48+X3"
+},
+"rating": 4.1,
+"reference": "ChIJvReaWXG5wjsR_0LlPaJuLIs",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 43,
+"vicinity": "Datta Mandir Road, Pratham Bunglow Society, Wakad, Pimpri-Chinchwad"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5627285,
+"lng": 73.81313150000001
+},
+"viewport": {
+"northeast": {
+"lat": 18.5640087802915,
+"lng": 73.8144915302915
+},
+"southwest": {
+"lat": 18.5613108197085,
+"lng": 73.81179356970848
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "b496e378e65fb20db11bc1e39ec6273d843e7450",
+"name": "Aundh Police Station",
+"photos": [
+{
+"height": 3120,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/104044704865154472342/photos\">Rishabh Jain</a>"
+],
+"photo_reference": "CmRaAAAA-eZ-2jk20g0AtWTNbu4zPl5wlgEro1-z5vuBvgkBhrwWOZutve_dBXh3z3omMqyYwi7_5mTOw0kcmlK2qX0JanhcAvWwyy0LPOK81b3oG6abmYAPnSCL7TkTDt9iBmrhEhCO7uXQrTOrgm3O7ehakssbGhQ5HTZnfTA97rAVpbnG6e6uzExGaQ",
+"width": 4160
+}
+],
+"place_id": "ChIJHQiMQze_wjsRg9XDNYt-mNs",
+"plus_code": {
+"compound_code": "HR77+37 Pune, Maharashtra, India",
+"global_code": "7JCMHR77+37"
+},
+"rating": 2.9,
+"reference": "ChIJHQiMQze_wjsRg9XDNYt-mNs",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 19,
+"vicinity": "Ward No. 8, Aundh Gaon, Aundh, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5627857,
+"lng": 73.8137181
+},
+"viewport": {
+"northeast": {
+"lat": 18.5640939802915,
+"lng": 73.8149611802915
+},
+"southwest": {
+"lat": 18.5613960197085,
+"lng": 73.8122632197085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "669de481a651959d3fd6d4dbd4317ba607894512",
+"name": "Police workstation",
+"place_id": "ChIJd6a0Ije_wjsRPLbz4BmbCKw",
+"plus_code": {
+"compound_code": "HR77+4F Pune, Maharashtra, India",
+"global_code": "7JCMHR77+4F"
+},
+"reference": "ChIJd6a0Ije_wjsRPLbz4BmbCKw",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"vicinity": "Phase 1, Siddarth Nagar Society, Aundh, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5914509,
+"lng": 73.738845
+},
+"viewport": {
+"northeast": {
+"lat": 18.5927691802915,
+"lng": 73.74017533029149
+},
+"southwest": {
+"lat": 18.59007121970849,
+"lng": 73.73747736970849
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "def651ce658fad9705d58132f33f91be1ca15191",
+"name": "Hinjawadi Police Chowky",
+"photos": [
+{
+"height": 4160,
+"html_attributions": [
+"<a href=\"https://maps.google.com/maps/contrib/115070888445465466037/photos\">Dhamaal Videos</a>"
+],
+"photo_reference": "CmRaAAAAlbfRFbN9D3gaMN7o_9-Lzc42i_gHiPd9RsJgBFEAyXvwtJ6Pxou13GD2AopB1_5JHD27M0Fse71D7Zoo7T2Otf7FVnCoTmYXQmDYA62L4eu0nlIgT-pnYo0E7XsAfDbqEhBbjRqVttWFZAHrwu-Zm0YYGhSeirjim-GlsDAgaN3qoZYRR_h1mg",
+"width": 2340
+}
+],
+"place_id": "ChIJF4I8AN27wjsRWhY1mMAAPc8",
+"plus_code": {
+"compound_code": "HPRQ+HG Pimpri-Chinchwad, Maharashtra, India",
+"global_code": "7JCMHPRQ+HG"
+},
+"rating": 3.9,
+"reference": "ChIJF4I8AN27wjsRWhY1mMAAPc8",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 8,
+"vicinity": "Hinjawadi Phase 2 Road, Hinjawadi Village, Hinjawadi, Pimpri-Chinchwad"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5626016,
+"lng": 73.8139898
+},
+"viewport": {
+"northeast": {
+"lat": 18.5638780302915,
+"lng": 73.8151500302915
+},
+"southwest": {
+"lat": 18.5611800697085,
+"lng": 73.8124520697085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "6c78312e252b58d7edb113bf74b0a23ed21efa8e",
+"name": "Body Gate Police Station",
+"place_id": "ChIJNSa1Pze_wjsRyhY80McvcXE",
+"plus_code": {
+"compound_code": "HR77+2H Pune, Maharashtra, India",
+"global_code": "7JCMHR77+2H"
+},
+"rating": 4.8,
+"reference": "ChIJNSa1Pze_wjsRyhY80McvcXE",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 6,
+"vicinity": "Vidyapeeth Road, Phase 1, Aundh Gaon, Dhaygude Wada, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5616275,
+"lng": 73.81381979999999
+},
+"viewport": {
+"northeast": {
+"lat": 18.5630004802915,
+"lng": 73.81516603029151
+},
+"southwest": {
+"lat": 18.5603025197085,
+"lng": 73.8124680697085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "33982e68ccbbc1480d9c02b9ac057a1f01f9c087",
+"name": "ACP Office Aundh",
+"place_id": "ChIJd99IQje_wjsRzeCbFq0_Sxo",
+"plus_code": {
+"compound_code": "HR67+MG Pune, Maharashtra, India",
+"global_code": "7JCMHR67+MG"
+},
+"rating": 3,
+"reference": "ChIJd99IQje_wjsRzeCbFq0_Sxo",
+"scope": "GOOGLE",
+"types": [
+"local_government_office",
+"police",
+"point_of_interest",
+"establishment"
+],
+"user_ratings_total": 1,
+"vicinity": "Ward No. 8, Pune, 411007, Aundh Gaon, Aundh, Pune"
+},
+{
+"geometry": {
+"location": {
+"lat": 18.5381629,
+"lng": 73.79814089999999
+},
+"viewport": {
+"northeast": {
+"lat": 18.5394577802915,
+"lng": 73.7994925302915
+},
+"southwest": {
+"lat": 18.5367598197085,
+"lng": 73.7967945697085
+}
+}
+},
+"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/police-71.png",
+"id": "da4681d45fbe647ad11f37cb044b14fc44754ae8",
+"name": "Pashan Police Station",
+"opening_hours": {
+"open_now": true
+},
+"place_id": "ChIJwzqJ4xy_wjsRlUbLKL2itpo",
+"plus_code": {
+"compound_code": "GQQX+77 Pune, Maharashtra, India",
+"global_code": "7JCMGQQX+77"
+},
+"reference": "ChIJwzqJ4xy_wjsRlUbLKL2itpo",
+"scope": "GOOGLE",
+"types": [
+"police",
+"point_of_interest",
+"establishment"
+],
+"vicinity": "Pune, Sanjay Nagar Pashan, Pashan, Pune"
+}
+],
+"status": "OK"
+}
