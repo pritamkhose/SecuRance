@@ -1,7 +1,9 @@
 package com.securance.service;
 
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.IBinder;
 
@@ -18,10 +20,12 @@ public class SoundService extends Service {
     }
 
     public void onCreate() {
+        audioManager();
         player = MediaPlayer.create(this, R.raw.speech); //select music file // rockon
         player.setLooping(true); //set looping
         player.setVolume(100,100);
     }
+
 
     public int onStartCommand(Intent intent, int flags, int startId) {
         player.start();
@@ -33,6 +37,12 @@ public class SoundService extends Service {
         player.release();
         stopSelf();
         super.onDestroy();
+    }
+
+    private void audioManager() {
+        // https://stackoverflow.com/questions/40925722/how-to-increase-and-decrease-the-volume-programmatically-in-android
+        AudioManager audioManager = (AudioManager)  getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
+        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 90, 0);
     }
 
 }

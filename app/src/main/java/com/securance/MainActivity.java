@@ -30,11 +30,16 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import android.support.v7.widget.CardView;
 import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,6 +55,12 @@ import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsResult;
 import com.google.android.gms.location.LocationSettingsStates;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.gson.Gson;
 import com.securance.service.SoundService;
 import com.securance.util.AppConstant;
@@ -116,16 +127,14 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
         mReceiver = new BatteryBroadcastReceiver();
 
-        ((Button) findViewById(R.id.btn_panic)).setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("MissingPermission")
+        ((CardView) findViewById(R.id.btn_panic)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 panicCall();
             }
         });
 
-        ((Button) findViewById(R.id.btn_sms)).setOnClickListener(new View.OnClickListener() {
+        ((CardView) findViewById(R.id.btn_sms)).setOnClickListener(new View.OnClickListener() {
             @SuppressLint("MissingPermission")
             @Override
             public void onClick(View view) {
@@ -134,14 +143,14 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             }
         });
 
-        ((Button) findViewById(R.id.btn_contact)).setOnClickListener(new View.OnClickListener() {
+        ((CardView) findViewById(R.id.btn_contact)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getBaseContext(), ContactListActivity.class));
             }
         });
 
-        ((Button) findViewById(R.id.btn_place)).setOnClickListener(new View.OnClickListener() {
+        ((CardView) findViewById(R.id.btn_place)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), PlacesActivity.class);
@@ -150,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             }
         });
 
-        ((Button) findViewById(R.id.btn_track)).setOnClickListener(new View.OnClickListener() {
+        ((CardView) findViewById(R.id.btn_track)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), TrackMapActivity.class);
@@ -162,22 +171,29 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     private void panicCall() {
         if (isSongPlay) {
-            disableSlient();
+            ((ImageView) findViewById(R.id.panicimg)).setImageResource(R.mipmap.stop);
             isSongPlay = false;
             //start service and play music
             startService(new Intent(MainActivity.this, SoundService.class));
+            if (isNetworkAvaiable()) {
+                notifyFirebase(true);
+            } else {
+                SendCallSMS();
+            }
         } else {
+            ((ImageView) findViewById(R.id.panicimg)).setImageResource(R.mipmap.panic);
             isSongPlay = true;
             //stop service and stop music
             stopService(new Intent(MainActivity.this, SoundService.class));
+            if (isNetworkAvaiable()) {
+                notifyFirebase(false);
+            }
         }
-        if (isNetworkAvaiable()) {
 
-        } else {
-            SendCallSMS();
-        }
 
     }
+
+
 
     private void SendCallSMS() {
         if (ActivityCompat.checkSelfPermission(MainActivity.this, CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
@@ -274,6 +290,28 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         }
 
         getGPSLocation();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_contact_list, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.action_exit: {
+                finishAffinity();
+            }
+            return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 
@@ -433,6 +471,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     }
 
 
+    @SuppressLint("MissingPermission")
     private String getDeviceInfo() {
         String deviceInfo = "";
         String serviceName = Context.TELEPHONY_SERVICE;
@@ -442,13 +481,13 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             requestPermission();
         } else {
             IMEI = m_telephonyManager.getDeviceId();
-            IMSI = m_telephonyManager.getSubscriberId();
-            mPhoneNumber = m_telephonyManager.getLine1Number();
-            String s = "";
-            s += "^OS Version:" + System.getProperty("os.version") + "(" + Build.VERSION.INCREMENTAL + ")";
-            s += "^OS API Level:" + Build.VERSION.SDK;
-            s += "^Device:" + Build.DEVICE;
-            s += "^Model (and Product):" + Build.MODEL + " (" + Build.PRODUCT + ")";
+//            IMSI = m_telephonyManager.getSubscriberId();
+//            mPhoneNumber = m_telephonyManager.getLine1Number();
+//            String s = "";
+//            s += "^OS Version:" + System.getProperty("os.version") + "(" + Build.VERSION.INCREMENTAL + ")";
+//            s += "^OS API Level:" + Build.VERSION.SDK;
+//            s += "^Device:" + Build.DEVICE;
+//            s += "^Model (and Product):" + Build.MODEL + " (" + Build.PRODUCT + ")";
 
             // deviceInfo = "PhNo:" + mPhoneNumber + "^IMEI:" + IMEI + "^IMSI:" + IMSI + s + "^" + System.getProperty("os.version") + "^" + System.getProperty("android.os.Build.VERSION.SDK");
             //System.out.println("deviceInfo==="+deviceInfo);
@@ -852,6 +891,38 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         final PrintWriter printWriter = new PrintWriter(result);
         aThrowable.printStackTrace(printWriter);
         return result.toString();
+    }
+
+    private void notifyFirebase(Boolean isPanic) {
+        FirebaseApp.initializeApp(this);
+
+        FirebaseDatabase mFirebaseInstance = FirebaseDatabase.getInstance();
+
+        String imei = getDeviceInfo();
+        if (imei == null) {
+            imei = "1234567890123456";
+        }
+        // store app title to 'app_title' node
+        if(isPanic){
+            mFirebaseInstance.getReference("app_title").setValue(imei);
+        } else {
+            mFirebaseInstance.getReference("app_title").setValue("");
+        }
+
+        // app_title change listener
+        mFirebaseInstance.getReference("app_title").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String appTitle = dataSnapshot.getValue(String.class);
+                Log.d("FirebaseDatabase -->", "App title updated - " + appTitle);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.e("FirebaseDatabase -->", "Failed to read app title value.", error.toException());
+            }
+        });
     }
 
 }

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white_pressed"
@@ -32,15 +34,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@color/holo_red_light"
-                android:textColor="@color/white"
+                android:id="@+id/btn_panic"
+                card_view:cardCornerRadius="5dp"
+                card_view:contentPadding="5dp"
+                card_view:cardBackgroundColor="@color/holo_red_light"
+                card_view:cardElevation="4dp"
+                card_view:cardMaxElevation="6dp"
                 >
 
-                <Button
-                    android:id="@+id/btn_panic"
+                <RelativeLayout
+                    android:background="@color/white"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Panic"/>
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/panicimg"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/panic" />
+
+                </RelativeLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -54,31 +69,74 @@
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/holo_orange_light"
+                    card_view:cardCornerRadius="5dp"
+                    card_view:contentPadding="5dp"
+                    card_view:cardBackgroundColor="@color/holo_blue_light"
+                    card_view:cardElevation="4dp"
+                    card_view:cardMaxElevation="6dp"
                     android:layout_margin="10dp"
+                    android:id="@+id/btn_sms"
                    >
-                    <Button
-                        android:id="@+id/btn_sms"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Send SMS"/>
 
+                    <RelativeLayout
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/sendsmsimg"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/message" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sendsmsimg"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="20dp"
+                            android:textColor="@color/black"
+                            android:text="Send SMS" />
+                    </RelativeLayout>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    card_view:cardCornerRadius="5dp"
+                    card_view:contentPadding="5dp"
+                    card_view:cardBackgroundColor="@color/holo_blue_light"
+                    card_view:cardElevation="4dp"
+                    card_view:cardMaxElevation="6dp"
                     android:layout_margin="10dp"
-                    android:background="@color/holo_green_light"
+                    android:id="@+id/btn_contact"
                     >
 
-                    <Button
-                        android:id="@+id/btn_contact"
+                    <RelativeLayout
+                        android:background="@color/white"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Contact List"/>
+                        android:layout_height="match_parent">
 
+                        <ImageView
+                            android:id="@+id/contactimg"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/contactaddrbook" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/contactimg"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="20dp"
+                            android:textColor="@color/black"
+                            android:text="Contact List" />
+                    </RelativeLayout>
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
@@ -93,31 +151,74 @@
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    card_view:cardCornerRadius="5dp"
+                    card_view:contentPadding="5dp"
+                    card_view:cardBackgroundColor="@color/holo_green_light"
+                    card_view:cardElevation="4dp"
+                    card_view:cardMaxElevation="6dp"
                     android:layout_margin="10dp"
-                    android:background="@color/holo_blue_light"
+                    android:id="@+id/btn_place"
                     >
 
-                    <Button
-                        android:id="@+id/btn_place"
+                    <RelativeLayout
+                        android:background="@color/white"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Near Place"/>
+                        android:layout_height="match_parent">
 
+                        <ImageView
+                            android:id="@+id/nearimg"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/location" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/nearimg"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="20dp"
+                            android:textColor="@color/black"
+                            android:text="Near Places" />
+                    </RelativeLayout>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    card_view:cardCornerRadius="5dp"
+                    card_view:contentPadding="5dp"
+                    card_view:cardBackgroundColor="@color/holo_green_light"
+                    card_view:cardElevation="4dp"
+                    card_view:cardMaxElevation="6dp"
                     android:layout_margin="10dp"
-                    android:background="@color/holo_blue_light"
+                    android:id="@+id/btn_track"
                     >
 
-                    <Button
-                        android:id="@+id/btn_track"
+                    <RelativeLayout
+                        android:background="@color/white"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Track Location"/>
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/trackmapimg"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/map" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/trackmapimg"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="20dp"
+                            android:textColor="@color/black"
+                            android:text="Track Location" />
+                    </RelativeLayout>
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
