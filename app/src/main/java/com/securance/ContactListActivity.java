@@ -238,7 +238,7 @@ public class ContactListActivity extends AppCompatActivity {
             hm.put(getResources().getString(R.string.et_fname), s);
 
             s = etPhone.getText().toString();
-            if (s != null && s.length() > 6) {
+            if (s != null && s.length() > 9) {
                 hm.put(getResources().getString(R.string.et_phone), s);
 
                 if (((Button) promptsView.findViewById(R.id.btn_delete)).getVisibility() == View.VISIBLE ) {

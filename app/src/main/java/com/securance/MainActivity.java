@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     LocationManager locationManager;
     String mprovider;
     SharedPrefUtils sh;
-    Boolean isSongPlay = true;
+    Boolean isPanic = false;
 //    TextView tv_location;
 
     //http://alexzh.com/tutorials/android-battery-status-use-broadcastreceiver/
@@ -170,9 +170,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     }
 
     private void panicCall() {
-        if (isSongPlay) {
+        if (!isPanic) {
             ((ImageView) findViewById(R.id.panicimg)).setImageResource(R.mipmap.stop);
-            isSongPlay = false;
+            isPanic = true;
             //start service and play music
             startService(new Intent(MainActivity.this, SoundService.class));
             if (isNetworkAvaiable()) {
@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             }
         } else {
             ((ImageView) findViewById(R.id.panicimg)).setImageResource(R.mipmap.panic);
-            isSongPlay = true;
+            isPanic = false;
             //stop service and stop music
             stopService(new Intent(MainActivity.this, SoundService.class));
             if (isNetworkAvaiable()) {
@@ -222,6 +222,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         }
     }
 
+    @SuppressLint("MissingPermission")
     private void makeCall() {
         if (ActivityCompat.checkSelfPermission(MainActivity.this, CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             requestPermission();
@@ -375,6 +376,14 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     public void sendSMS(String phoneNo, String msg) {
         try {
+            if(phoneNo.startsWith("+91")){
+                phoneNo =  phoneNo.replace("+91","");
+            }
+            if(phoneNo.startsWith("0")){
+                phoneNo =  phoneNo.substring(1);
+            }
+            phoneNo = "+91" + phoneNo;
+
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(phoneNo, null, msg, null, null);
             Toast.makeText(getApplicationContext(), "Message Sent", Toast.LENGTH_LONG).show();
@@ -661,6 +670,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         ConnectivityManager cm = (ConnectivityManager) MainActivity.this
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
 
+        @SuppressLint("MissingPermission")
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
             return true;
@@ -800,33 +810,36 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
 
     private void updateFirebase(Location location) {
-        String imei = getDeviceInfo();
-        if (imei == null) {
-            imei = "1234567890123456";
-        }
+        if(location != null) {
+            String imei = getDeviceInfo();
+            if (imei == null) {
+                imei = "1234567890123456";
+            }
 
-        if (imei != null && imei.length() > 10 && location != null) {
+            if (imei != null && imei.length() > 10 && location != null) {
 
-            Log.d("location update-->>", location.toString());
+                Log.d("location update-->>", location.toString());
 
-            String timeStamp = new SimpleDateFormat("yyyy.MM.dd-HH.mm.ss.SSS").format(new Date());
-            HashMap<String, Object> hm = new HashMap<>();
-            hm.put("Longitude", location.getLongitude());
-            hm.put("Latitude", location.getLatitude());
-            hm.put("Accuracy", location.getAccuracy());
-            hm.put("Altitude", location.getAltitude());
-            hm.put("Provider", location.getProvider());
-            hm.put("Speed", location.getSpeed());
+                String timeStamp = new SimpleDateFormat("yyyy.MM.dd-HH.mm.ss.SSS").format(new Date());
+                HashMap<String, Object> hm = new HashMap<>();
+                hm.put("Longitude", location.getLongitude());
+                hm.put("Latitude", location.getLatitude());
+                hm.put("Accuracy", location.getAccuracy());
+                hm.put("Altitude", location.getAltitude());
+                hm.put("Provider", location.getProvider());
+                hm.put("Speed", location.getSpeed());
 //        hm.put("SpeedAccuracyMetersPerSecond", location.getSpeedAccuracyMetersPerSecond());
-            hm.put("TimeStamp", timeStamp);
-            hm.put("Username", sh.getSharedPrefString("Username"));
-            hm.put("IMEI", imei);
+                hm.put("TimeStamp", timeStamp);
+                hm.put("Username", sh.getSharedPrefString("Username"));
+                hm.put("IMEI", imei);
+                hm.put("isPanic",isPanic);
 
-            Gson gson = new Gson();
-            http_post_request(gson.toJson(hm), imei);
-        } else {
-            Log.d("IMEI Not Found -->>", imei);
+                Gson gson = new Gson();
+                http_post_request(gson.toJson(hm), imei);
+            } else {
+                Log.d("IMEI Not Found -->>", imei);
 //            Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
@@ -858,7 +871,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     "Provider": "gps",
                     "Speed": 0,
                     "TimeStamp": "2019.02.17-10.19.15.273",
-                    "Username": "Pritam"
+                    "Username": "Pritam",
+                    "isPanic": false
 
         }'*/
 

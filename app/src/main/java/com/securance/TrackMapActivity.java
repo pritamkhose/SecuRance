@@ -27,8 +27,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.securance.pojo.LocationTrackerObj;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
@@ -39,6 +44,10 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 
 public class TrackMapActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -66,7 +75,8 @@ public class TrackMapActivity extends FragmentActivity implements OnMapReadyCall
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        myDataBase();
+        locTrackerSync();
+
     }
 
 
@@ -102,34 +112,25 @@ public class TrackMapActivity extends FragmentActivity implements OnMapReadyCall
 
     }
 
-    private void myDataBase() {
+    private void locTrackerSync() {
+        // https://securance-94e24.firebaseio.com/LocationTracker.json
 
         FirebaseApp.initializeApp(this);
 
         mFirebaseInstance = FirebaseDatabase.getInstance();
 
-        //appName();
-
-        locTrackerSync();
-
-    }
-
-    private void locTrackerSync() {
-        // https://securance-94e24.firebaseio.com/LocationTracker.json
         // get reference to 'LocationTracker' node
         mFirebaseDatabase = mFirebaseInstance.getReference("LocationTracker");
-        // DatabaseReference db = mFirebaseDatabase.child("1234567890123456");
-
+//        DatabaseReference db = mFirebaseDatabase.child("123456789012345");
 //        String s = mFirebaseDatabase.getKey()+ "\n" + mFirebaseDatabase.child("1234567890123456").toString() ;
 //        Log.d("FirebaseDatabase -->", s);
-
 
         // https://stackoverflow.com/questions/38652007/how-to-retrieve-specific-list-of-data-from-firebase
 
         mFirebaseDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
-                aList = new ArrayList<>();
+               /* aList = new ArrayList<>();
                 HashMap<String, Object> hm = new HashMap<>();
 
                for (DataSnapshot postSnapshot : snapshot.getChildren()) {
@@ -143,16 +144,11 @@ public class TrackMapActivity extends FragmentActivity implements OnMapReadyCall
                     }
                     aList.add(hm);
                 }
-                if(isFrist){
-                    isFrist = false;
-                } else {
-                    mMap.clear();
-                }
 
                 Log.d("FirebaseDatabase -->", aList.toString());
-                drawMarker(aList);
+                drawMarker(aList);*/
 
-               // http_get_location();
+                http_get_location();
 
             }
 
@@ -163,43 +159,80 @@ public class TrackMapActivity extends FragmentActivity implements OnMapReadyCall
         });
     }
 
+    Boolean isWebNewRun = true;
+    String strResponse;
     private void http_get_location() {
-        ArrayList<HashMap<String, Object>> al = new ArrayList();
-
+       
         try {
-            String url = "https://securance-94e24.firebaseio.com/LocationTracker.json";
+
+            if(isWebNewRun) {
+                isWebNewRun = false;
+
+                String url = "https://securance-94e24.firebaseio.com/LocationTracker.json";
+                OkHttpClient client = new OkHttpClient.Builder()
+                        .connectTimeout(10, TimeUnit.SECONDS)
+                        .writeTimeout(10, TimeUnit.SECONDS)
+                        .readTimeout(30, TimeUnit.SECONDS)
+                        .build();
+
+                Request request = new Request.Builder()
+                        .url(url)
+                        .get()
+                        .build();
+                Log.d("-->>", request.toString());
 
 
-            OkHttpClient client = new OkHttpClient.Builder()
-                    .connectTimeout(10, TimeUnit.SECONDS)
-                    .writeTimeout(10, TimeUnit.SECONDS)
-                    .readTimeout(30, TimeUnit.SECONDS)
-                    .build();
+                client.newCall(request).enqueue(new Callback() {
+                    @Override
+                    public void onFailure(Call call, IOException e) {
+                        isWebNewRun = true;
+                        call.cancel();
+                        Log.d("-->>", getStackTrace(e));
+                    }
 
-            Request request = new Request.Builder()
-                    .url(url)
-                    .get()
-                    .build();
-            Log.d("-->>", request.toString());
+                    @Override
+                    public void onResponse(Call call, Response response) throws IOException {
+                        //Log.d("-->>", response.toString());
+                        isWebNewRun = true;
+                        strResponse = response.body().string();
+                        if(strResponse != null && strResponse.length() > 3){
+                            JsonObject json1 = (JsonObject) (new JsonParser()).parse(strResponse);
+                            Set<Map.Entry<String, JsonElement>> entrySet = json1.entrySet();
 
+                            for(Map.Entry<String,JsonElement> entry : entrySet) {
+                                JsonObject jo = (JsonObject)json1.get(entry.getKey());
+                                HashMap<String, Object> hm = new HashMap<>();
+//                hm.put("Accuracy", jo.get("Accuracy"));
+//                hm.put("Altitude", jo.get("Altitude"));
+                                hm.put("Latitude", jo.get("Latitude"));
+                                hm.put("Longitude", jo.get("Longitude"));
+//                hm.put("Provider", jo.get("Provider"));
+//                hm.put("Speed", jo.get("Speed"));
+//                hm.put("TimeStamp", jo.get("TimeStamp"));
+//                hm.put("IMEIKey", entry.getKey());
+                                hm.put("Username", jo.get("Username"));
+                                hm.put("IMEI", jo.get("IMEI"));
+//                hm.put("isPanic", jo.get("isPanic"));
+                                aList.add(hm);
+                            }
 
-            client.newCall(request).enqueue(new Callback() {
-                @Override
-                public void onFailure(Call call, IOException e) {
-                    call.cancel();
-                   // Log.d("-->>", getStackTrace(e));
-                }
+                            Log.d("FirebaseDatabase -->", isFrist + "\t"+aList.toString());
 
-                @Override
-                public void onResponse(Call call, Response response) throws IOException {
-                    //Log.d("-->>", response.toString());
-                }
-            });
+                            drawMarker(aList);
+                        }
+                    }
+                });
+
+            }
+
         } catch (Exception e) {
-           // e.printStackTrace();
+            isWebNewRun = true;
+           e.printStackTrace();
         }
     }
 
+
+    Marker myMarker;
     private void drawMarker(ArrayList<HashMap<String, Object>> aList) {
 
         // Add a marker in Sydney and move the camera
@@ -207,26 +240,39 @@ public class TrackMapActivity extends FragmentActivity implements OnMapReadyCall
 //        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker @ my location"));
 //        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if(isFrist){
+                    isFrist = false;
+                } else {
+                    mMap.clear();
+                    if(myMarker != null){
+                        myMarker.remove();
+                    }
+                }
 
-        for (int i = 0; i < aList.size(); i++) {
-            try {
-                double Latitude = Double.parseDouble(aList.get(i).get("Latitude").toString());
-                double Longitude = Double.parseDouble(aList.get(i).get("Longitude").toString());
-                LatLng point = new LatLng(Latitude, Longitude);
+                for (int i = 0; i < aList.size(); i++) {
+                    try {
+                        double Latitude = Double.parseDouble(aList.get(i).get("Latitude").toString());
+                        double Longitude = Double.parseDouble(aList.get(i).get("Longitude").toString());
+                        LatLng point = new LatLng(Latitude, Longitude);
 
-                mMap.addMarker(new MarkerOptions()
-                                .position(point)
-                                .title(aList.get(i).get("Username").toString())
-                                .snippet(aList.get(i).get("IMEI").toString())
-                                .draggable(true)
-                                .alpha(0.6f)
-                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
-                        //.icon(BitmapDescriptorFactory.fromResource(R.drawable.jkmarker))
-                );
-            } catch (Exception e) {
-                e.printStackTrace();
+                        myMarker = mMap.addMarker(new MarkerOptions()
+                                        .position(point)
+                                        .title(aList.get(i).get("Username").toString())
+                                        .snippet(aList.get(i).get("IMEI").toString())
+                                        .draggable(true)
+                                        .alpha(0.6f)
+                                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                                //.icon(BitmapDescriptorFactory.fromResource(R.drawable.jkmarker))
+                        );
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
             }
-        }
+        });
 
     }
 
@@ -250,6 +296,13 @@ public class TrackMapActivity extends FragmentActivity implements OnMapReadyCall
                 Toast.makeText(TrackMapActivity.this, "Failed to read app title value.", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    public String getStackTrace(Throwable aThrowable) {
+        final Writer result = new StringWriter();
+        final PrintWriter printWriter = new PrintWriter(result);
+        aThrowable.printStackTrace(printWriter);
+        return result.toString();
     }
 
 }

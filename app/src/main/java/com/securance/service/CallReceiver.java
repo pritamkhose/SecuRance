@@ -52,7 +52,7 @@ public class CallReceiver extends PhonecallReceiver {
 
         SharedPrefUtils sh = new SharedPrefUtils(ctx);
         String EmergencyNo = sh.getSharedPrefString("EmergencyNo");
-        if(EmergencyNo != null && EmergencyNo.length() > 6 ) {
+        if(EmergencyNo != null && EmergencyNo.length() > 9 ) {
             String sno = number;
             String eno = EmergencyNo;
             if(sno.startsWith("+91")){
