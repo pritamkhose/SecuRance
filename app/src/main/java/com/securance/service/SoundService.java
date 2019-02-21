@@ -22,12 +22,15 @@ public class SoundService extends Service {
     public void onCreate() {
         audioManager();
         player = MediaPlayer.create(this, R.raw.speech); //select music file // rockon
-        player.setLooping(true); //set looping
-        player.setVolume(100,100);
     }
 
 
     public int onStartCommand(Intent intent, int flags, int startId) {
+        if(intent != null && (intent.getStringExtra("ringerLoop") != null)) {
+            player.setLooping(true); //set looping
+        }
+        player.setVolume(100,100);
+
         player.start();
         return Service.START_NOT_STICKY;
     }

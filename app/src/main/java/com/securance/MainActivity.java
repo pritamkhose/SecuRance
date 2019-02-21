@@ -62,6 +62,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.gson.Gson;
+import com.securance.service.MyAlertNotifyService;
 import com.securance.service.SoundService;
 import com.securance.util.AppConstant;
 import com.securance.util.GPSTracker;
@@ -126,6 +127,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         // tv_location = ((TextView) findViewById(R.id.location));
 
         mReceiver = new BatteryBroadcastReceiver();
+        getApplicationContext().startService((new Intent(getApplicationContext(), MyAlertNotifyService.class)));
 
         ((CardView) findViewById(R.id.btn_panic)).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -174,7 +176,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             ((ImageView) findViewById(R.id.panicimg)).setImageResource(R.mipmap.stop);
             isPanic = true;
             //start service and play music
-            startService(new Intent(MainActivity.this, SoundService.class));
+            Intent intent = new Intent(MainActivity.this, SoundService.class);
+            intent.putExtra("ringerLoop", "ringerLoop");
+            startService(intent);
             if (isNetworkAvaiable()) {
                 notifyFirebase(true);
             } else {
@@ -916,9 +920,14 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         if (imei == null) {
             imei = "1234567890123456";
         }
+
+        String Username = sh.getSharedPrefString("Username");
+        if (Username == null) {
+            Username = "";
+        }
         // store app title to 'app_title' node
         if(isPanic){
-            mFirebaseInstance.getReference("app_title").setValue(imei);
+            mFirebaseInstance.getReference("app_title").setValue(Username  + " - " + imei);
         } else {
             mFirebaseInstance.getReference("app_title").setValue("");
         }

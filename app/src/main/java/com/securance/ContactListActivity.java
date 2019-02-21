@@ -38,7 +38,9 @@ public class ContactListActivity extends AppCompatActivity {
     //Dialog alertDialog;
     ListView listView;
     CustomListAdapter adapter;
+    TextView tvUserId;
     Boolean isStartup = true;
+    SharedPrefUtils sh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,19 @@ public class ContactListActivity extends AppCompatActivity {
         });
 
 
+        tvUserId = ((TextView) findViewById(R.id.userId));
+        tvUserId .setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                onEditUserName();
+            }
+        });
+
+        sh = new SharedPrefUtils(this);
+        String username = sh.getSharedPrefString("Username");
+        if(username != null && username.length() > 0){
+            tvUserId.setText("User Name : " + username);
+        }
+
         getContactList();
 
         Intent intent = getIntent();
@@ -66,6 +81,61 @@ public class ContactListActivity extends AppCompatActivity {
             isStartup = false;
             openPopup(0, false);
         }
+    }
+
+
+    private void onEditUserName() {
+        // Creating alert Dialog with one Button
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ContactListActivity.this);
+
+        // Setting Dialog Title
+        alertDialog.setTitle("Enter Username");
+
+        // Setting Dialog Message
+        //alertDialog.setMessage("Enter Usename");
+
+        final EditText input = new EditText(ContactListActivity.this);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.setMargins(10,10,10,10);
+        input.setLayoutParams(lp);
+        String username = sh.getSharedPrefString("Username");
+        if(username != null && username.length() > 0){
+            input.setText(username);
+        }
+        input.setSingleLine();
+        alertDialog.setView(input);
+
+        // Setting Positive "Yes" Button
+        alertDialog.setPositiveButton("Save",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int which) {
+                        // Write your code here to execute after dialog
+                        String username = input.getText().toString();
+                        if(username != null && username.length() > 3){
+                            sh.saveSharedPrefString("Username", username);
+                            dialog.cancel();
+                            tvUserId.setText("User Name : " + username);
+                        } else {
+                            Toast.makeText(ContactListActivity.this, "Invalid Username", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                });
+        // Setting Negative "NO" Button
+        alertDialog.setNegativeButton("Cancel",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Write your code here to execute after dialog
+                        dialog.cancel();
+                    }
+                });
+
+        // closed
+
+        // Showing Alert Message
+        alertDialog.show();
     }
 
     private void getContactList() {

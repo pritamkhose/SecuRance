@@ -7,7 +7,6 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".ContactListActivity"
     tools:showIn="@layout/activity_contact_list">
 
     <!--<TextView-->
@@ -18,6 +17,35 @@
         <!--app:layout_constraintLeft_toLeftOf="parent"-->
         <!--app:layout_constraintRight_toRightOf="parent"-->
         <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:elevation="3dp"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Aqua"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/userId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User Name :  "
+                android:layout_centerVertical="true"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
     <include layout="@layout/listitem" />
 

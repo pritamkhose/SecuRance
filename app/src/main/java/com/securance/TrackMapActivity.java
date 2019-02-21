@@ -241,6 +241,7 @@ public class TrackMapActivity extends FragmentActivity implements OnMapReadyCall
 //        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
         runOnUiThread(new Runnable() {
+            @SuppressLint("MissingPermission")
             @Override
             public void run() {
                 if(isFrist){
@@ -250,6 +251,17 @@ public class TrackMapActivity extends FragmentActivity implements OnMapReadyCall
                     if(myMarker != null){
                         myMarker.remove();
                     }
+
+                    //mMap = googleMap;
+
+                    // Enabling MyLocation Layer of Google Map
+                    mMap.setMyLocationEnabled(true);
+                    mMap.getUiSettings().setMyLocationButtonEnabled(true);
+
+                    //http://www.programcreek.com/java-api-examples/index.php?class=com.google.android.gms.maps.GoogleMap&method=setMyLocationEnabled
+                    mMap.getUiSettings().setAllGesturesEnabled(true);
+                    mMap.getUiSettings().setCompassEnabled(true);
+                    mMap.getUiSettings().setZoomControlsEnabled(true);
                 }
 
                 for (int i = 0; i < aList.size(); i++) {

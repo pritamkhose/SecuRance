@@ -75,15 +75,11 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:hint="Name"
+                        android:singleLine="true"
                         android:imeOptions="actionNext"
                         android:inputType="textCapSentences" />
                 </android.support.design.widget.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                </android.support.design.widget.TextInputLayout>
 
 
                 <android.support.design.widget.TextInputLayout
@@ -96,9 +92,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:hint="Mobile No"
-                        android:imeOptions="actionNext"
+                        android:hint="Mobile no"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
                         android:inputType="phone"
+                        android:digits="+0123456789"
                         android:maxLength="14" />
                 </android.support.design.widget.TextInputLayout>
 

@@ -70,18 +70,18 @@
             </intent-filter>
         </receiver>
 
+        <!--FCM Notification-->
+        <!--<service android:name=".service.MyFirebaseMessagingService">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.firebase.MESSAGING_EVENT" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
 
-        <service android:name=".service.MyFirebaseMessagingService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-
-        <service android:name=".service.MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
+        <!--<service android:name=".service.MyFirebaseInstanceIDService">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.firebase.INSTANCE_ID_EVENT" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
 
 
         <!--This part is inside the application-->
@@ -111,6 +111,13 @@
                 <!--<data android:scheme="package" />-->
             <!--</intent-filter>-->
         </receiver>
+
+        <service
+            android:name=".service.MyAlertNotifyService"
+            android:launchMode="singleTop"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:label="@string/app_name" >
+        </service>
     </application>
 
 </manifest>
