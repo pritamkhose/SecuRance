@@ -91,6 +91,7 @@ import okhttp3.Response;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CALL_PHONE;
+import static android.Manifest.permission.READ_CALL_LOG;
 import static android.Manifest.permission.READ_PHONE_STATE;
 import static android.Manifest.permission.SEND_SMS;
 
@@ -325,7 +326,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         return ContextCompat.checkSelfPermission(getApplicationContext(), CALL_PHONE) == PackageManager.PERMISSION_GRANTED
                 && ContextCompat.checkSelfPermission(getApplicationContext(), SEND_SMS) == PackageManager.PERMISSION_GRANTED
                 && ContextCompat.checkSelfPermission(getApplicationContext(), ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
-                && ContextCompat.checkSelfPermission(getApplicationContext(), READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED;
+                && ContextCompat.checkSelfPermission(getApplicationContext(), READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED
+                && ContextCompat.checkSelfPermission(getApplicationContext(), READ_CALL_LOG) == PackageManager.PERMISSION_GRANTED;
     }
 
     private void requestPermission() {
@@ -334,7 +336,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     CALL_PHONE,
                     SEND_SMS,
                     ACCESS_FINE_LOCATION,
-                    READ_PHONE_STATE
+                    READ_PHONE_STATE,
+                    READ_CALL_LOG
             }, PERMISSION_REQUEST_CODE);
         }
     }
@@ -349,8 +352,10 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     boolean per1 = grantResults[1] == PackageManager.PERMISSION_GRANTED;
                     boolean per2 = grantResults[2] == PackageManager.PERMISSION_GRANTED;
                     boolean per3 = grantResults[3] == PackageManager.PERMISSION_GRANTED;
+                    boolean per4 = grantResults[4] == PackageManager.PERMISSION_GRANTED;
 
-                    if (per0 && per1 && per2 && per3) {
+
+                    if (per0 && per1 && per2 && per3 && per4) {
                         //Snackbar.make(view, "Permission Granted, Now you can access location data and camera.", Snackbar.LENGTH_LONG).show();
                     } else {
                         // Toast.makeText(this, "As Permission Denied,\nApplication unable work", Toast.LENGTH_LONG).show();

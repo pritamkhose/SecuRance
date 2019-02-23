@@ -10,6 +10,7 @@ import android.os.IBinder;
 import com.securance.R;
 
 // https://stackoverflow.com/questions/21043059/play-background-sound-in-android-applications
+// https://www.text2speech.org/ - Hey, I am in danger please help me.
 
 public class SoundService extends Service {
     MediaPlayer player;
