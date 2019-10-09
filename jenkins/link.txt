@@ -1,0 +1,11 @@
+
+https://jenkins.io/download/
+
+https://bugfender.com/blog/how-to-add-your-first-android-job-to-jenkins/
+
+https://www.vogella.com/tutorials/JenkinsAndroid/article.html
+
+https://stackoverflow.com/questions/42682357/how-to-fix-android-studios-2-3-ndk-bug
+
+https://stackoverflow.com/questions/36860021/gradle-build-execution-failed-for-task-applint
+

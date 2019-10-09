@@ -1,0 +1,131 @@
+Started by user pritam khose
+Building in workspace C:\Users\Pritam\.jenkins\workspace\SecuRance
+using credential ed00a598-69d1-4d22-98d3-b10d75960d5c
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/pritamkhose/SecuRance.git # timeout=10
+Fetching upstream changes from https://github.com/pritamkhose/SecuRance.git
+ > git.exe --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git.exe fetch --tags --progress -- https://github.com/pritamkhose/SecuRance.git +refs/heads/*:refs/remotes/origin/*
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 82d3edfc133ed0ec4cd9acba96246d3660c2ca70 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 82d3edfc133ed0ec4cd9acba96246d3660c2ca70
+Commit message: "Update build.gradle"
+ > git.exe rev-list --no-walk c682c29ac76e7b1f6e39e3b9d542045cd5b8cee1 # timeout=10
+[Gradle] - Launching build.
+[SecuRance] $ cmd.exe /C "C:\Users\Pritam\.jenkins\workspace\SecuRance\gradlew.bat build && exit %%ERRORLEVEL%%"
+Starting a Gradle Daemon, 1 incompatible and 4 stopped Daemons could not be reused, use --status for details
+
+> Configure project :app
+Observed package id 'platforms;android-28' in inconsistent location 'E:\Software\AndroidStudio\sdk\platforms\android-9' (Expected 'E:\Software\AndroidStudio\sdk\platforms\android-28')
+Already observed package id 'platforms;android-28' in 'E:\Software\AndroidStudio\sdk\platforms\android-28'. Skipping duplicate at 'E:\Software\AndroidStudio\sdk\platforms\android-9'
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:compileDebugAidl NO-SOURCE
+> Task :app:compileDebugRenderscript UP-TO-DATE
+> Task :app:checkDebugManifest UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:prepareLintJar UP-TO-DATE
+> Task :app:generateDebugSources UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:mainApkListPersistenceDebug UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:writeDebugApplicationId UP-TO-DATE
+
+> Task :app:processDebugGoogleServices
+Parsing json file: C:\Users\Pritam\.jenkins\workspace\SecuRance\app\google-services.json
+
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :app:compileDebugJavaWithJavac UP-TO-DATE
+> Task :app:compileDebugNdk NO-SOURCE
+> Task :app:compileDebugSources UP-TO-DATE
+> Task :app:mergeDebugShaders UP-TO-DATE
+> Task :app:compileDebugShaders UP-TO-DATE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:signingConfigWriterDebug UP-TO-DATE
+> Task :app:transformClassesWithDexBuilderForDebug UP-TO-DATE
+> Task :app:transformDexArchiveWithExternalLibsDexMergerForDebug UP-TO-DATE
+> Task :app:transformDexArchiveWithDexMergerForDebug UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :app:transformNativeLibsWithMergeJniLibsForDebug UP-TO-DATE
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :app:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:compileReleaseAidl NO-SOURCE
+> Task :app:compileReleaseRenderscript UP-TO-DATE
+> Task :app:checkReleaseManifest UP-TO-DATE
+> Task :app:generateReleaseBuildConfig UP-TO-DATE
+> Task :app:generateReleaseSources UP-TO-DATE
+> Task :app:javaPreCompileRelease UP-TO-DATE
+> Task :app:mainApkListPersistenceRelease UP-TO-DATE
+> Task :app:generateReleaseResValues UP-TO-DATE
+> Task :app:generateReleaseResources UP-TO-DATE
+> Task :app:writeReleaseApplicationId UP-TO-DATE
+
+> Task :app:processReleaseGoogleServices
+Parsing json file: C:\Users\Pritam\.jenkins\workspace\SecuRance\app\google-services.json
+
+> Task :app:mergeReleaseResources UP-TO-DATE
+> Task :app:createReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:processReleaseManifest UP-TO-DATE
+> Task :app:processReleaseResources UP-TO-DATE
+> Task :app:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :app:compileReleaseNdk NO-SOURCE
+> Task :app:compileReleaseSources UP-TO-DATE
+> Task :app:lintVitalRelease SKIPPED
+> Task :app:mergeReleaseShaders UP-TO-DATE
+> Task :app:compileReleaseShaders UP-TO-DATE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets UP-TO-DATE
+> Task :app:signingConfigWriterRelease UP-TO-DATE
+> Task :app:transformClassesWithDexBuilderForRelease UP-TO-DATE
+> Task :app:transformDexArchiveWithExternalLibsDexMergerForRelease UP-TO-DATE
+> Task :app:transformDexArchiveWithDexMergerForRelease UP-TO-DATE
+> Task :app:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :app:transformNativeLibsWithMergeJniLibsForRelease UP-TO-DATE
+> Task :app:processReleaseJavaRes NO-SOURCE
+> Task :app:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+> Task :app:packageRelease UP-TO-DATE
+> Task :app:assembleRelease UP-TO-DATE
+> Task :app:assemble
+
+> Task :app:lint
+Ran lint on variant debug: 198 issues found
+Ran lint on variant release: 198 issues found
+Wrote HTML report to file:///C:/Users/Pritam/.jenkins/workspace/SecuRance/app/build/reports/lint-results.html
+Wrote XML report to file:///C:/Users/Pritam/.jenkins/workspace/SecuRance/app/build/reports/lint-results.xml
+
+> Task :app:generateDebugUnitTestSources UP-TO-DATE
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:compileDebugUnitTestJavaWithJavac
+> Task :app:processDebugUnitTestJavaRes NO-SOURCE
+> Task :app:testDebugUnitTest
+> Task :app:generateReleaseUnitTestSources UP-TO-DATE
+> Task :app:preReleaseUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileReleaseUnitTest
+> Task :app:compileReleaseUnitTestJavaWithJavac
+> Task :app:processReleaseUnitTestJavaRes NO-SOURCE
+> Task :app:testReleaseUnitTest
+> Task :app:test
+> Task :app:check
+> Task :app:build
+
+BUILD SUCCESSFUL in 48s
+59 actionable tasks: 10 executed, 49 up-to-date
+Build step 'Invoke Gradle script' changed build result to SUCCESS
+Finished: SUCCESS
